@@ -195,6 +195,12 @@ class ProjectManagementController extends Controller
         {
             $report_fields[] = "contractor";
         }
+
+        if($request->input('date_monitored') == "date_monitored")
+        {
+            $report_fields[] = "date_monitored";
+        }
+        
         if($request->input('field_month') == "month")
         {
             $report_fields[] = "field_month";
@@ -203,10 +209,15 @@ class ProjectManagementController extends Controller
         {
             $report_fields[] = "field_year";
         }
+
+        
         if($request->input('monitored_by') == "monitored_by")
         {
             $report_fields[] = "monitored_by";
         }
+
+
+        
 
         $quarter[0] = [1,2,3,4,5,6,7,8,9,10,11,12];
         $quarter[1] = [1,2,3];
@@ -354,7 +365,7 @@ class ProjectManagementController extends Controller
         $control_number = $request->input('control_number');
         // $files = $request->input('files');
         $files = $request->file('files');
-
+        
         $make_directory = mkdir('/');
         foreach ($files as $value) {
             Storage::disk('public')->putFileAs('/'. $control_number, $value, $value->getClientOriginalName());

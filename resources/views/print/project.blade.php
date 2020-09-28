@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+&nbsp;<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -110,6 +110,9 @@
 					@if($header == "field_year")
 						<th >Year</th>
 					@endif
+					@if($header == "date_monitored")
+						<th >Date Monitored</th>
+					@endif
 					@if($header == "monitored_by")
 						<th >Monitor</th>
 					@endif
@@ -166,6 +169,11 @@
 						@if($fields == "field_year")
 							<td >{{date('Y', strtotime($value->date_monitored))}}</td>
 						@endif
+
+						@if($fields == "date_monitored")
+							<td >{{date('F d, Y', strtotime($value->date_monitored))}}</td>
+						@endif
+
 						@if($fields == "monitored_by")
 							<td >{{$value->rel_monitor_by->monitor ?? "Not set"}}</td>
 						@endif

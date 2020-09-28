@@ -165,6 +165,12 @@
 							</div>
 
 							<div class="custom-control custom-checkbox">
+							  <input  type="checkbox" checked class="custom-control-input" id="date_monitored" value="date_monitored" name="date_monitored">
+							  <label class="custom-control-label" for="date_monitored">Date Monitored</label>
+							</div>
+
+
+							<div class="custom-control custom-checkbox">
 							  <input  type="checkbox" checked class="custom-control-input" id="monitored_by" value="monitored_by" name="monitored_by">
 							  <label class="custom-control-label" for="monitored_by">Monitor</label>
 							</div>

@@ -245,13 +245,13 @@ const router = new VueRouter({
 
 
 // router.beforeEach((to, from, next) => {
-	// var auth_state = to.matched.some(record => record.meta.auth);
-	// if(auth_state == true && store.state.AUTH_STATUS == false)
-	// {
-	// 	next("/login")
-	// }else{
-	// 	next();
-	// }
+// 	var auth_state = to.matched.some(record => record.meta.auth);
+// 	if(auth_state == true && store.state.AUTH_STATUS == false)
+// 	{
+// 		next("/login")
+// 	}else{
+// 		next();
+// 	}
 // })
 
 
